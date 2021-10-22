@@ -1,0 +1,54 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color : #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSS */
+
+/* ヘッダー */
+.header {
+  background-color: #e6ece6;
+  margin-bottom: 48px;
+  padding: 20px 0;
+}
+.header_inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_left {
+  width: 50%;
+  padding: 20px;
+  color: rgb(135, 145, 150);
+}
+.nav_btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #3e4f5a;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #3e4f5a solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.contents {
+  background-color: white;
+}
+.first-view {
+  height: 100vh
+}  
