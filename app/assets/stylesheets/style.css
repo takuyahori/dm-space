@@ -19,6 +19,7 @@ ul,li {
   background-color: #e6ece6;
   margin-bottom: 48px;
   padding: 20px 0;
+  height: 50px;
 }
 .header_inner {
   width: 1024px;
@@ -52,3 +53,8 @@ ul,li {
 .first-view {
   height: 100vh
 }  
+
+.top_view {
+  height: 100%;
+  width: 100%;
+}
