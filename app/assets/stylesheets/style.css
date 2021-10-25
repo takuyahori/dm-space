@@ -16,8 +16,7 @@ ul,li {
 
 /* ヘッダー */
 .header {
-  background-color: #e6ece6;
-  margin-bottom: 48px;
+  background-color: #f7c9e3;
   padding: 20px 0;
   height: 50px;
 }
@@ -34,7 +33,7 @@ ul,li {
 .nav_left {
   width: 50%;
   padding: 20px;
-  color: rgb(135, 145, 150);
+  color: rgb(240, 243, 245);
 }
 .nav_btn {
   display: inline-block;
@@ -47,14 +46,13 @@ ul,li {
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.contents {
-  background-color: white;
-}
 .first-view {
-  height: 100vh
-}  
+  height: 100vh;
+  position: relative;
+}
 
 .top_view {
   height: 100%;
   width: 100%;
+  opacity: 0.5;
 }
