@@ -1,8 +1,8 @@
 <%= form_with model: @cliant, url: new_cliant_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
-  <div class='gorm-header'>
+  <div class='form-header'>
     <h1 class='form-header-text'>
-      会員情報入力
+      Sign_up
     </h1>
   </div>
   <%= render 'shared/error_messages', momdel: f.object %>
@@ -60,7 +60,7 @@
     <%= f.text_field :diet_history, class:"input-default", id:"diet-history" %>
   </div>
   <div class="register-btn">
-    <%= f.submit "新規登録" ,class:"registar-red-btn" %>
+    <%= f.submit "新規登録" ,class:"register-red-btn" %>
   </div>
 <% end %>
 </div>
