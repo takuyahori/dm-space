@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     passwords:     'trainers/passwords',
     registrations: 'trainers/registrations'
   }
-  root 'tops#index'
+  root to: 'tops#index'
 end
