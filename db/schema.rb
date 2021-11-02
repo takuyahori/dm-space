@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_25_052519) do
+ActiveRecord::Schema.define(version: 2021_11_02_113751) do
 
   create_table "cliants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 2021_10_25_052519) do
     t.index ["reset_password_token"], name: "index_cliants_on_reset_password_token", unique: true
   end
 
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.date "today", null: false
+    t.text "explanation", null: false
+    t.bigint "cliant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cliant_id"], name: "index_posts_on_cliant_id"
+  end
+
   create_table "trainers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -45,4 +55,5 @@ ActiveRecord::Schema.define(version: 2021_10_25_052519) do
     t.index ["reset_password_token"], name: "index_trainers_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "posts", "cliants"
 end
