@@ -54,7 +54,7 @@
 | encrypted_password | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
-| profile            | string  | null: false               |
+| profile            | text    | null: false               |
 | diet_history       | string  | null: false               |
 
 ### Association
@@ -72,7 +72,7 @@
 | encrypted_password | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
-| profile            | string  | null: false               |
+| profile            | text    | null: false               |
 
 ### Association
 

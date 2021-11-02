@@ -1,16 +1,15 @@
 <header class="header" >
   <div class="header_inner">
     <div class="nav">
-      <h1 class="nav_left"><a>DMspace</a></h1>
+      <h1 class="nav_left"><a>DMspace</a></h1>  
       <div class="nav_right">
-        <%= link_to "ログアウト", "#", class: :nav_btn %>
-        <%= link_to "New Post", "#", class: :nav_btn %>
+        <%= link_to "trainer", new_trainer_registration_path, class: :nav_btn %>
+        <%= link_to "cliant", new_cliant_registration_path, class: :nav_btn %>
       </div>
-      <div class="nav_right">
-        <%= link_to "trainer", "#", class: :nav_btn %>
-        <%= link_to "cliant", "#", class: :nav_btn %>
-        <%= link_to "新規登録", "#", class: :nav_btn %>
-       </div>
+      <div>
+        <%= link_to "trainer_in", new_trainer_session_path, class: :nav_btn %>
+        <%= link_to "cliant_in", new_cliant_session_path, class: :nav_btn %>
+      </div>
     </div>
   </div>
 </header>
