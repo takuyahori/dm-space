@@ -6,7 +6,7 @@
         <div class="nav_right">
           <%= link_to "trainer_out", destroy_trainer_session_path, method: :delete, class: :nav_btn %>
           <%= link_to "cliatn_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %>
-          <%= link_to "New Post", "#", class: :nav_btn %>
+          <%= link_to "New Post", new_post_path, class: :nav_btn %>
         </div>
       <% else %>
         <div>
