@@ -86,7 +86,7 @@
 | ----------- | ----------- | ------------------------------ |
 | title       | string      | null: false                    |
 | date        | date        | null: false                    |
-| explanation | string      | null: false                    |
+| explanation | text        | null: false                    |
 | client      | refelences  | null: false, foreign_key: true |
 
 ### Association

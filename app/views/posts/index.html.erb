@@ -21,6 +21,15 @@
     </div>
   </div>
 </header>
-<div class="first-view">
-  <%= image_tag 'top_view.jpg', class: :top_view %>
+<div class="card_wrapper">
+  <div class="card">
+    <%= link_to image_tag(@posts.image, class: :card_img ), posts_path %>
+    <div class="card_body">
+      <%= link_to "postのタイトル", posts_path %>
+      <p class="card_summary">
+        <%= "postの説明文" %>
+      </p>
+      <%= link_to "by postの投稿者名", posts_path, class: :card_user %>
+    </div>
+  </div>
 </div>
