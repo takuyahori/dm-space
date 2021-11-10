@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to posts_path
+    if @post.save!
+      redirect_to action: :index
     else
       render :new
     end
@@ -19,6 +19,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :today, :explanation, :image).merge(cliant_id: current_cliant.id)
+    params.require(:post).permit(:title, :date, :explanation, :image).merge(cliant_id: current_cliant.id)
   end
 end

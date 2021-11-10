@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :today
+    validates :date
     validates :explanation
     validates :image
   end
