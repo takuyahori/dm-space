@@ -19,6 +19,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :date, :explanation, :image).merge(cliant_id: current_cliant.id)
+    params.require(:post).permit(:title, :date, :explanation, images: []).merge(cliant_id: current_cliant.id)
   end
 end

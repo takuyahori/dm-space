@@ -1,11 +1,11 @@
 class Post < ApplicationRecord
   belongs_to :cliant
-  has_one_attached :image
+  has_many_attached :images
 
   with_options presence: true do
     validates :title
     validates :date
     validates :explanation
-    validates :image
+    validates :images
   end
 end

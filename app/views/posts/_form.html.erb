@@ -15,8 +15,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "食事写真" %><br />
-    <%= f.file_field :image , id:"posts_image" %>
+    <%= f.label :images, "食事写真" %><br />
+    <%= f.file_field :images, multiple: true, id:"posts_image" %>
   </div>
 
   <div class="actions">
