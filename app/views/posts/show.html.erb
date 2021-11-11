@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+<div class="post_show">
+  <div class="post_box">
+    <h2 class="post_title">
+      <%= @post.title %>
+    </h2>
+    <div class="post_img_content">
+      <%= image_tag @post.images[0], class:"post_box_img" %>
+    </div>
+    <div class="post_date">
+      <%= @post.date %>
+    </div>
+    <div class="post_explanation">
+      <%= @post.explanation %>
+    </div>
+    <% if cliant_signed_in? && current_cliant.id == @post.cliant_id %>
+      <%= link_to "編集", "#", class: "item_red_btn" %>
+      <p class="or_text">or</p>
+      <%= link_to "削除", "#", class: "post_destroy" %>
+      <%= link_to "戻る", "#", class: "post_back" %>
+    <% else trainer_signed_in? %>
+      <%= link_to "戻る", "#", class: "post_back" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+    
