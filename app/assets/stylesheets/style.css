@@ -103,31 +103,54 @@ ul,li {
 }
 
 /* 投稿内容表示ページ */
-.card_wrapper {
+.post_contents {
+  background-color: rgb(248, 227, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.post_contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.post_lists {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  min-height: calc(100vh - 161px);
+  justify-content: center;  
 }
 
-.card {
-  width: calc((100% - 50ox) / 3);
-  margin-bottom: 40px;
+.post_lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: rgb(248, 227, 247);
 }
 
-.card_img {
-  margin-bottom: 16px;
+.post_img_content {
+  position: relative;
 }
 
-.card_summary {
-  font-size: 16px;
+.post_img {
+  width: 33vh;
+  height: 33vh;
 }
 
-.card_user {
-  display: block;
-  font-size: 12px;
-  color: #999;
-  text-align: right;
-  text-decoration: underline;
+.post_info {
+  background: rgb(248, 227, 247);
+  color: black;
+  padding: 1vw;
 }
+
+.post_date {
+  font-size: 2.5vh;
+}
+
+.post-title {
+  font-size: 2.5vh;
+}
+
+/* 投稿内容表示ページ */
