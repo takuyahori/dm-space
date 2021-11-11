@@ -1,26 +1,4 @@
-<header class="header" >
-  <div class="header_inner">
-    <div class="nav">
-      <h1 class="nav_left"><a>DMspace</a></h1>
-      <% if trainer_signed_in? or cliant_signed_in? %>
-        <div class="nav_right">
-          <%= link_to "trainer_out", destroy_trainer_session_path, method: :delete, class: :nav_btn %>
-          <%= link_to "cliatn_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %>
-          <%= link_to "New Post", new_post_path, class: :nav_btn %>
-        </div>
-      <% else %>
-        <div>
-          <%= link_to "trainer_in", new_trainer_session_path, class: :nav_btn %>
-          <%= link_to "cliant_in", new_cliant_session_path, class: :nav_btn %>
-        </div>
-        <div class="nav_right">
-          <%= link_to "trainer", new_trainer_registration_path, class: :nav_btn %>
-          <%= link_to "cliant", new_cliant_registration_path, class: :nav_btn %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</header>
+<%= render "shared/header" %>
 <div class="first-view">
   <%= image_tag 'top_view.jpg', class: :top_view %>
 </div>
