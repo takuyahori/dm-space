@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show]
+
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -16,9 +18,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :date, :explanation, images: []).merge(cliant_id: current_cliant.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
