@@ -4,7 +4,7 @@
       <h1 class="nav_left"><a>DMspace</a></h1>
       <% if cliant_signed_in? %>
         <div class="nav_right">
-          <%= link_to "cliatn_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %>
+          <%= link_to "cliant_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %>
           <%= link_to "New Post", new_post_path, class: :nav_btn %>
         </div>
       <% elsif trainer_signed_in? %>
