@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+<div class="post_show">
+  <div class="post_box">
+    <h2 class="post_title">
+      <%= @post.title %>
+    </h2>
+    <div class="post_img_content">
+      <%= image_tag @post.images[0], class:"post_box_img" %>
+    </div>
+    <% if cliant_signed_in? && current_cliant.id == @post.cliant_id %>
+      <%= link_to "編集", "#", class: "post_red_btn" %>
+      <p class="or_text">or</p>
+      <%= link_to "削除", post_path, method: :delete, class: "post_destroy" %>
+      <%= link_to "戻る", posts_path, class: "post_back" %>
+    <% else trainer_signed_in? %>
+      <%= link_to "戻る", "#", class: "post_back" %>
+    <% end %>
+    <table class="detail_table">
+      <tbody>
+        <tr>
+          <th class="detail_post">日付</th>
+          <td class="detail_value"><%= @post.date %></td>
+        </tr>
+        <tr>
+          <th class="detail_post">説明文</th>
+          <td class="detail_value"><%= @post.explanation %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
