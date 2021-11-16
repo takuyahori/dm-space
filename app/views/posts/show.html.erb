@@ -10,8 +10,8 @@
     <% if cliant_signed_in? && current_cliant.id == @post.cliant_id %>
       <%= link_to "編集", "#", class: "post_red_btn" %>
       <p class="or_text">or</p>
-      <%= link_to "削除", "#", class: "post_destroy" %>
-      <%= link_to "戻る", "#", class: "post_back" %>
+      <%= link_to "削除", post_path, method: :delete, class: "post_destroy" %>
+      <%= link_to "戻る", posts_path, class: "post_back" %>
     <% else trainer_signed_in? %>
       <%= link_to "戻る", "#", class: "post_back" %>
     <% end %>
