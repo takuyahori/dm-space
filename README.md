@@ -97,7 +97,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| text    | string     | null: false                    |
+| text    | text       | null: false                    |
 | trainer | references | null: false  foreign_key: true |
 | client  | references | null: false  foreign_key: true |
 | post    | refelences | null: false, foreign_key: true |
