@@ -1,20 +1,16 @@
 <%= render "shared/header" %>
+<div class="slider">
+  <% @post.images.each do |image| %>
+    <div class="post_img_content">
+      <%= image_tag image, class:"post_box_img" %>
+    </div>
+  <% end %>
+</div>
 <div class="post_show">
   <div class="post_box">
-    <h2 class="post_title">
+    <h2 class="post_title_2">
       <%= @post.title %>
     </h2>
-    <div class="post_img_content">
-      <%= image_tag @post.images[0], class:"post_box_img" %>
-    </div>
-    <% if cliant_signed_in? && current_cliant.id == @post.cliant_id %>
-      <%= link_to "編集", edit_post_path, class: "post_red_btn" %>
-      <p class="or_text">or</p>
-      <%= link_to "削除", post_path, method: :delete, class: "post_destroy" %>
-      <%= link_to "戻る", posts_path, class: "post_back" %>
-    <% else trainer_signed_in? %>
-      <%= link_to "戻る", posts_path, class: "post_back" %>
-    <% end %>
     <table class="detail_table">
       <tbody>
         <tr>
@@ -27,5 +23,16 @@
         </tr>
       </tbody>
     </table>
+    <% if cliant_signed_in? && current_cliant.id == @post.cliant_id %>
+      <div class="post_btn">
+        <%= link_to "編集", edit_post_path, class: "post_red_btn" %>
+      </div>
+      <div class="post_btn_2">
+        <%= link_to "削除", post_path, method: :delete, class: "post_gray_btn" %>
+        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
+    <% else trainer_signed_in? %>
+        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
+      </div>
+    <% end %>
   </div>
 </div>
