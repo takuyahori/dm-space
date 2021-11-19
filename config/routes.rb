@@ -10,5 +10,8 @@ Rails.application.routes.draw do
     registrations: 'trainers/registrations'
   }
   root to: 'tops#index'
-  resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+
+  resources :posts do
+    resources :comments, only: :create
+  end
 end
