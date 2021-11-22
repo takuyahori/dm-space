@@ -35,13 +35,22 @@
       </div>
     <% end %>
   </div>
-  <div class="comment">
+  <div class="comments">
     <% if trainer_signed_in? or cliant_signed_in? %>
-      <%= form_with(model: [@post, @comment], local: true)do |form| %>
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
         <%= form.submit "SEND" %>
       <% end %>
     <% else %>
       <strong><p>*** コメントの投稿には神姫登録/ログインが必要です ***</p></strong>
     <% end %>
+    <div class="comment">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <%= comment.text %>
+        </p>
+      <% end%>
+    </div>
+  </div>
 </div>
