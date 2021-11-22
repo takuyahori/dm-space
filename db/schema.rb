@@ -52,14 +52,11 @@ ActiveRecord::Schema.define(version: 2021_11_19_125745) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text", null: false
-    t.bigint "trainer_id", null: false
-    t.bigint "cliant_id", null: false
-    t.bigint "post_id", null: false
+    t.integer "trainer_id"
+    t.integer "cliant_id"
+    t.integer "post_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["cliant_id"], name: "index_comments_on_cliant_id"
-    t.index ["post_id"], name: "index_comments_on_post_id"
-    t.index ["trainer_id"], name: "index_comments_on_trainer_id"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -89,8 +86,5 @@ ActiveRecord::Schema.define(version: 2021_11_19_125745) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "comments", "cliants"
-  add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "trainers"
   add_foreign_key "posts", "cliants"
 end
