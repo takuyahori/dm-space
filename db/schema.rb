@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_125745) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text", null: false
+    t.string "nickname"
     t.integer "trainer_id"
     t.integer "cliant_id"
     t.integer "post_id"
