@@ -27,30 +27,37 @@
       <div class="post_btn">
         <%= link_to "編集", edit_post_path, class: "post_red_btn" %>
       </div>
-      <div class="post_btn_2">
-        <%= link_to "削除", post_path, method: :delete, class: "post_gray_btn" %>
-        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
+      <%= link_to "削除", post_path, method: :delete, class: "post_gray_btn" %>
+      <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
     <% else trainer_signed_in? %>
-        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
-      </div>
+      <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
     <% end %>
-  </div>
-  <div class="comments">
-    <% if trainer_signed_in? or cliant_signed_in? %>
-      <%= form_with(model: [@post, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+    <div class="comments">
+      <% if trainer_signed_in? or cliant_signed_in? %>
+        <%= form_with(model: [@post, @comment], local: true) do |form| %>
+          <div class="field">
+            <%= form.text_area :text, class: "area", placeholder: "コメントする", size: "70×10", rows: "2" %>
+          </div>
+          <div class="action">
+            <%= form.submit "SEND", class: "button" %>
+          </div>
+        <% end %>
+      <% else %>
+        <strong><p>*** コメントの投稿には新規登録/ログインが必要です ***</p></strong>
       <% end %>
-    <% else %>
-      <strong><p>*** コメントの投稿には神姫登録/ログインが必要です ***</p></strong>
-    <% end %>
-    <div class="comment">
-      <h4>＜コメント一覧＞</h4>
-      <% @comments.each do |comment| %>
-        <p>
-          <%= comment.text %>
-        </p>
-      <% end%>
+      <div class="comment_list">
+        <h4>＜コメント一覧＞</h4>
+        <% @comments.each do |comment| %>
+          <p>
+            <% if cliant_signed_in? %>
+              <strong><%= link_to comment.cliant.nickname, "/posts" %>:</strong>  
+            <% else trainer_signed_in? %>
+              <strong><%= link_to comment.trainer.nickname, "/posts" %>:</strong>
+            <% end %>
+            <%= comment.text %>
+          </p>
+        <% end%>
+      </div>
     </div>
   </div>
 </div>
