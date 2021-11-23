@@ -16,10 +16,11 @@ class CommentsController < ApplicationController
   private
 
   def comment_cliant_params
-    params.require(:comment).permit(:text).merge(cliant_id: current_cliant.id, post_id: params[:post_id])
+    params.require(:comment).permit(:text, :nickname).merge(cliant_id: current_cliant.id, post_id: params[:post_id])
   end
 
   def comment_trainer_params
-    params.require(:comment).permit(:text).merge(trainer_id: current_trainer.id, post_id: params[:post_id])
+    params.require(:comment).permit(:text, :nickname).merge(trainer_id: current_trainer.id, post_id: params[:post_id])
   end
+
 end

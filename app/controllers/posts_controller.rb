@@ -20,11 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @comment = Comment.new
-    if cliant_signed_in?
-      @comments = @post.comments.includes(:cliant)
-    else trainer_signed_in?
-      @comments = @post.comments.includes(:trainer)
-    end
+    @comments = @post.comments.includes(:cliant)
   end
 
   def edit

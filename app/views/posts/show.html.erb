@@ -36,6 +36,7 @@
       <% if trainer_signed_in? or cliant_signed_in? %>
         <%= form_with(model: [@post, @comment], local: true) do |form| %>
           <div class="field">
+            <%= form.text_field :nickname, class: "nickname", placeholder: "アカウント名" %>
             <%= form.text_area :text, class: "area", placeholder: "コメントする", size: "70×10", rows: "2" %>
           </div>
           <div class="action">
@@ -49,11 +50,7 @@
         <h4>＜コメント一覧＞</h4>
         <% @comments.each do |comment| %>
           <p>
-            <% if cliant_signed_in? %>
-              <strong><%= link_to comment.cliant.nickname, "/posts" %>:</strong>  
-            <% else trainer_signed_in? %>
-              <strong><%= link_to comment.trainer.nickname, "/posts" %>:</strong>
-            <% end %>
+            <strong><%= link_to comment.nickname, "/posts" %>:</strong>
             <%= comment.text %>
           </p>
         <% end%>
