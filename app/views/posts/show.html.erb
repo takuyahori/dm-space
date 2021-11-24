@@ -48,13 +48,14 @@
       <% end %>
       <div class="comment_list">
         <h4>＜コメント一覧＞</h4>
-        <% @comments.each do |comment| %>
+        <% @post.comments.each do |comment| %>
           <p>
             <strong><%= link_to comment.nickname, "/posts" %>:</strong>
             <%= comment.text %>
           </p>
+          <%= link_to "削除", post_comment_path(@post, comment), method: :delete, class: "comment_delete" %> 
         <% end%>
       </div>
-    </div>
+  </div>
   </div>
 </div>

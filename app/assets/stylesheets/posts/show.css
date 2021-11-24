@@ -149,3 +149,8 @@
   font-size: 20px;
   color: #0f0c0c
 }
+
+.comment_delete {
+  font-size: 10px;
+  margin-top: -10px;
+}
