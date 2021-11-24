@@ -13,6 +13,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    if @comment.destroy
+      redirect_to "/posts/#{@comment.post.id}"
+    end
+  end
+
   private
 
   def comment_cliant_params
