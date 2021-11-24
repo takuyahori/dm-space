@@ -53,7 +53,9 @@
             <strong><%= link_to comment.nickname, "/posts" %>:</strong>
             <%= comment.text %>
           </p>
-          <%= link_to "削除", post_comment_path(@post, comment), method: :delete, class: "comment_delete" %> 
+          <% if cliant_signed_in? && current_cliant.id == comment.cliant_id or trainer_signed_in? && current_trainer.id == comment.trainer_id %>
+            <%= link_to "削除", post_comment_path(@post, comment), method: :delete, class: "comment_delete" %>
+          <% end %>
         <% end%>
       </div>
   </div>
