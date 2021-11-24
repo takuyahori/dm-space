@@ -104,3 +104,53 @@
   border:1px solid #dedede;
   font-size: 14px;
 }
+
+.comments {
+  width: 50%;
+  margin: 60px 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: rgb(209, 220, 231);
+  box-sizing: border-box;
+}
+
+.area {
+  height: 70px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 60px;
+  background: rgb(255, 127, 127, 0.97);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 7px 7px #666666;
+  border: 2px solid rgba(255, 127, 127, 0.97);
+}
+
+.button:hover {
+  box-shadow: none;
+  color: rgba(255, 127, 127, 0.97);
+  background: #ffffff
+}
+
+.comment_list {
+  list-style-type: square;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.comment_list h4 {
+  font-size: 20px;
+  color: #0f0c0c
+}
+
+.comment_delete {
+  font-size: 10px;
+  margin-top: -10px;
+}

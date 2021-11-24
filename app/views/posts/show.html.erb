@@ -27,12 +27,37 @@
       <div class="post_btn">
         <%= link_to "編集", edit_post_path, class: "post_red_btn" %>
       </div>
-      <div class="post_btn_2">
-        <%= link_to "削除", post_path, method: :delete, class: "post_gray_btn" %>
-        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
+      <%= link_to "削除", post_path, method: :delete, class: "post_gray_btn" %>
+      <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
     <% else trainer_signed_in? %>
-        <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
-      </div>
+      <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
     <% end %>
+    <div class="comments">
+      <% if trainer_signed_in? or cliant_signed_in? %>
+        <%= form_with(model: [@post, @comment], local: true) do |form| %>
+          <div class="field">
+            <%= form.text_field :nickname, class: "nickname", placeholder: "アカウント名" %>
+            <%= form.text_area :text, class: "area", placeholder: "コメントする", size: "70×10", rows: "2" %>
+          </div>
+          <div class="action">
+            <%= form.submit "SEND", class: "button" %>
+          </div>
+        <% end %>
+      <% else %>
+        <strong><p>*** コメントの投稿には新規登録/ログインが必要です ***</p></strong>
+      <% end %>
+      <div class="comment_list">
+        <h4>＜コメント一覧＞</h4>
+        <% @post.comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.nickname, "/posts" %>:</strong>
+            <%= comment.text %>
+          </p>
+          <% if cliant_signed_in? && current_cliant.id == comment.cliant_id or trainer_signed_in? && current_trainer.id == comment.trainer_id %>
+            <%= link_to "削除", post_comment_path(@post, comment), method: :delete, class: "comment_delete" %>
+          <% end %>
+        <% end%>
+      </div>
+  </div>
   </div>
 </div>

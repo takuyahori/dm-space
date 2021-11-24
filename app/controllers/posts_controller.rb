@@ -19,6 +19,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:trainer)
+    @comments = @post.comments.includes(:cliant)
   end
 
   def edit
