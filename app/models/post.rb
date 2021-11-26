@@ -6,8 +6,13 @@ class Post < ApplicationRecord
   has_many :cliant, through: :likes
   has_many :trainer, through: :likes
 
+
   def liked_by?(cliant)
     likes.where(cliant_id: cliant.id).exists?
+  end
+
+  def liked_by?(trainer)
+    likes.where(trainer_id: trainer.id).exists?
   end
 
   with_options presence: true do
