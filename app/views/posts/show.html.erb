@@ -58,6 +58,9 @@
           <% end %>
         <% end%>
       </div>
-  </div>
+    </div>
+    <div id="like-btn-<%= @post.id %>">
+       <%= render 'likes/like', post: @post %>
+     </div>
   </div>
 </div>
