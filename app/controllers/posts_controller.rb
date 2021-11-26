@@ -22,6 +22,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments.includes(:trainer)
     @comments = @post.comments.includes(:cliant)
+    @likes_count = Like.where(post_id: @post.id).count
   end
 
   def edit

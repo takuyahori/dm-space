@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :comments, only: [:create, :destroy]
+    post 'add' => 'likes#create'
+    delete '/add' => 'likes#destroy'
   end
 end

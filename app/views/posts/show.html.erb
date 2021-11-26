@@ -11,6 +11,12 @@
     <h2 class="post_title_2">
       <%= @post.title %>
     </h2>
+    <div class="like_btn", id="like-btn-<%= @post.id %>">
+      <%= render 'likes/like', post: @post %>
+        <div class="like_count_btn">
+          <%= @post.likes.count %>
+        </div>
+    </div>
     <table class="detail_table">
       <tbody>
         <tr>
@@ -58,6 +64,6 @@
           <% end %>
         <% end%>
       </div>
-  </div>
+    </div>
   </div>
 </div>
