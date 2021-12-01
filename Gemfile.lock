@@ -131,7 +131,6 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.1)
-    mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
@@ -139,8 +138,7 @@ GEM
     multipart-post (2.1.1)
     mysql2 (0.5.3)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     oauth2 (1.4.7)
       faraday (>= 0.8, < 2.0)
@@ -292,7 +290,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 6.0.0)
-  sass-rails (~> 5)
+  sass-rails
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
