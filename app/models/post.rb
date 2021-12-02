@@ -1,10 +1,10 @@
 class Post < ApplicationRecord
-  belongs_to :cliant
+  belongs_to :cliant, optional: true
   has_many_attached :images
   has_many :comments, dependent: :destroy
-  has_many :likes
-  has_many :cliant, through: :likes
-  has_many :trainer, through: :likes
+  has_many :likes, dependent: :destroy 
+  has_many :cliant, through: :likes, dependent: :destroy
+  has_many :trainer, through: :likes, dependent: :destroy
 
 
   def liked_by?(cliant)
