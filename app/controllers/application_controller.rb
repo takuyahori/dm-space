@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
-  before_action :authenticate_trainer!
-  before_action :authenticate_cliant!
+  before_action :authenticate_trainer!, except: [:index, :show]
+  before_action :authenticate_cliant!, except: [:index, :show]
 
   def after_sign_in_path_for(resource)
     posts_path(resource)
