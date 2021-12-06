@@ -1,4 +1,7 @@
 /* 投稿内容表示ページ */
+.main_contents {
+  background-image: url("/images/top_view.jpg");
+}
 
 .post_contents {
   background-color: rgb(248, 227, 247);
