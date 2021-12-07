@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     passwords:     'trainers/passwords',
     registrations: 'trainers/registrations'
   }
-  root to: 'tops#index'
+  root to: 'posts#index'
 
   resources :posts do
     resources :comments, only: [:create, :destroy]
