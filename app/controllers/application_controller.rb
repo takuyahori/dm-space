@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
-  before_action :authenticate_trainer!, except: [:index, :show]
-  before_action :authenticate_cliant!, except: [:index, :show]
+
+  def authenticate_any!
+    if cliant_signed_in?
+      true
+    else
+      authenticate_trainer!
+    end
+  end
 
   def after_sign_in_path_for(resource)
     posts_path(resource)
@@ -12,4 +18,5 @@ class ApplicationController < ActionController::Base
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
     end
   end
+
 end
