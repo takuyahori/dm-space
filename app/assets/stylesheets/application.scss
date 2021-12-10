@@ -23,3 +23,23 @@
 @import '@fortawesome/fontawesome-free/scss/regular';
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+@media screen and (max-width:480px) {
+  .header {
+    width: 100%;
+  }
+  .header_inner {
+    width: 100%;
+  }
+  .nav_btn {
+    font-size: 0.3rem;
+  }
+  .main_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: contain;
+  }
+  .post_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: contain;
+  }
+}
