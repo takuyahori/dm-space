@@ -91,14 +91,14 @@
 
 .detail_post {
   width: 20%;
-  background-color: rgb(228, 225, 225);
+  background-color: rgb(191, 219, 250);
   border: 1px solid #dedede;
   font-size: 14px;
   text-align: center;
 }
 
 .detail_value {
-  background-color: rgb(211, 205, 205);
+  background-color: #FFF;
   width: 80%;
   padding: 20px;
   border:1px solid #dedede;
@@ -110,7 +110,7 @@
   margin: 60px 0;
   padding: 20px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: rgb(209, 220, 231);
+  background-color: rgb(191, 219, 250);
   box-sizing: border-box;
 }
 
