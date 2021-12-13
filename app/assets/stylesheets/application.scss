@@ -189,3 +189,58 @@
     margin: 50px 0 0 20px;
   }
 }
+
+@media screen and (max-width:320px) {
+  .header {
+    width: 100%;
+  }
+
+  .header_inner {
+    width: 100%;
+  }
+
+  .nav_right {
+    margin-right: 10px;
+  }
+
+  .nav_btn {
+    font-size: 0.1rem;
+    margin-right: 10px;
+  }
+  
+  .main_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: 400px auto;
+  }
+
+  .post_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: contain;
+  }
+
+  .fa-arrow-alt-circle-left {
+    left: -125px;
+    top: 330px;
+  }
+
+  .fa-arrow-alt-circle-right {
+    right: -125px;
+    top: -285px;
+  }
+
+  .detail_table {
+    width: 20%;
+  }
+
+  .comments {
+    width: 20%;
+  }
+
+  .area {
+    width: 100%;
+  }
+
+  .form_wrapper {
+    margin: 50px 0 0 20px;
+  }
+}
