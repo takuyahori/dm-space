@@ -31,9 +31,11 @@
   .header_inner {
     width: 100%;
   }
+
   .nav_btn {
     font-size: 0.3rem;
   }
+  
   .main_contents {
     background-image: image-url('4558407_s.jpg');
     background-size: contain;
@@ -55,4 +57,17 @@
   .detail_table {
     width: 35%;
   }
+
+  .comments {
+    width: 30%;
+  }
+
+  .area {
+    width: 100%;
+  }
+
+  .form_wrapper {
+    margin: 50px 0 0 20px;
+  }
+
 }
