@@ -24,12 +24,17 @@
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:670px) {
   .header {
     width: 100%;
   }
+
   .header_inner {
     width: 100%;
+  }
+
+  .nav_right {
+    margin-right: 10px;
   }
 
   .nav_btn {
@@ -40,10 +45,12 @@
     background-image: image-url('4558407_s.jpg');
     background-size: contain;
   }
+
   .post_contents {
     background-image: image-url('4558407_s.jpg');
     background-size: contain;
   }
+
   .fa-arrow-alt-circle-left {
     left: -160px;
     top: 330px;
@@ -55,7 +62,7 @@
   }
 
   .detail_table {
-    width: 35%;
+    width: 30%;
   }
 
   .comments {
@@ -70,4 +77,115 @@
     margin: 50px 0 0 20px;
   }
 
+}
+
+@media screen and (min-width:669px) and (max-width:768px) {
+  .header {
+    width: 100%;
+  }
+
+  .header_inner {
+    width: 100%;
+  }
+
+  .nav_right {
+    margin-right: 10px;
+  }
+
+  .nav_btn {
+    font-size: 0.3rem;
+    margin-right: 10px;
+  }
+  
+  .main_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: 400px auto;
+  }
+
+  .post_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: contain;
+  }
+
+  .fa-arrow-alt-circle-left {
+    left: -300px;
+    top: 330px;
+  }
+
+  .fa-arrow-alt-circle-right {
+    right: -300px;
+    top: -290px;
+  }
+
+  .detail_table {
+    width: 30%;
+  }
+
+  .comments {
+    width: 30%;
+  }
+
+  .area {
+    width: 100%;
+  }
+
+  .form_wrapper {
+    margin: 50px 0 0 20px;
+  }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .header {
+    width: 100%;
+  }
+
+  .header_inner {
+    width: 100%;
+  }
+
+  .nav_right {
+    margin-right: 10px;
+  }
+
+  .nav_btn {
+    font-size: 0.3rem;
+    margin-right: 10px;
+  }
+  
+  .main_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: 400px auto;
+  }
+
+  .post_contents {
+    background-image: image-url('4558407_s.jpg');
+    background-size: contain;
+  }
+
+  .fa-arrow-alt-circle-left {
+    left: -400px;
+    top: 420px;
+  }
+
+  .fa-arrow-alt-circle-right {
+    right: -400px;
+    top: -370px;
+  }
+
+  .detail_table {
+    width: 30%;
+  }
+
+  .comments {
+    width: 30%;
+  }
+
+  .area {
+    width: 100%;
+  }
+
+  .form_wrapper {
+    margin: 50px 0 0 20px;
+  }
 }

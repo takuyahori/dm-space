@@ -87,6 +87,7 @@
 .detail_table {
   margin-bottom: 30px;
   width: 100%;
+  word-break: break-all;
 }
 
 .detail_post {
