@@ -23,6 +23,9 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:trainer)
     @comments = @post.comments.includes(:cliant)
     @likes_count = Like.where(post_id: @post.id).count
+    unless cliant_signed_in? or trainer_signed_in?
+      redirect_to root_path
+    end
   end
 
   def edit
