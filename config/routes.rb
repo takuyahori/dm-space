@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
   end
+
+  resources :cliants, only: [:show]
+  resources :trainers, only: [:show]
 end
