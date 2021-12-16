@@ -62,13 +62,19 @@
 }
 
 .post_red_btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
   text-align: center;
-  background-color: #ea352d;
-  font-size: 24px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  cursor: pointer;
+  padding: 12px 60px;
+  background: rgb(224, 20, 20);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 7px 7px #666666;
+  border: 2px solid rgba(224, 20, 20, 0.97);
+  margin: 20px 0;
 }
 
 .or_text {
@@ -76,12 +82,19 @@
 }
 
 .post_gray_btn {
-  background-color: lightgray;
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
   text-align: center;
-  font-size: 24px;
-  color: black;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  cursor: pointer;
+  padding: 12px 60px;
+  background: rgb(142, 155, 168);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 7px 7px #666666;
+  border: 2px solid rgba(142, 155, 168, 0.97);
+  margin: 20px 0;
 }
 
 .detail_table {
