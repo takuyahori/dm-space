@@ -1,21 +1,24 @@
 <%= render "shared/header" %>
-<div class="post_contents">
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @posts.each do |post| %>
-    <li class="list">
-      <%= link_to post_path(post.id) do %>
-        <div class="post_img_content">
-          <%= image_tag post.images[0], class: "post_img" if post.images.attached? %>
-        </div>
-        <div class="post_info">
-          <h3 class="post_date">
-            <%= post.date %>
-          </h3>
-          <h3 class="post_title">
-            <%= post.title %>
-          </h3>
-        </div>
-      <% end %>
-    </li>
-  <% end %>
+<div class="main_contents">
+  <div class="post_contents">
+    <p><%= @nickname %>さんの投稿一覧</p>
+    <% @posts.each do |post| %>
+      <li class="list">
+        <%= link_to post_path(post.id) do %>
+          <div class="post_img_content">
+            <%= image_tag post.images[0], class: "post_img" if post.images.attached? %>
+          </div>
+          <div class="post_info">
+            <h3 class="post_date">
+              <%= post.date %>
+            </h3>
+            <h3 class="post_title">
+              <%= post.title %>
+            </h3>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    <%= link_to "戻る", posts_path, class: "post_gray_btn" %>
+  </div>
 </div>
