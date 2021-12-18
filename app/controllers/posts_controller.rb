@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_root, only: [:edit]
 
   def index
     @posts = Post.all.order("created_at DESC")
@@ -53,4 +54,9 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
+
+  def redirect_root
+    redirect_to root_path unless cliant_signed_in? or trainer_signed_in?
+  end
+
 end
