@@ -8,6 +8,10 @@
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "4.3.0",
     "jquery": "^3.6.0",
+    "node-sass": "4.14.0",
+    "nuxt": "^2.15.8",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
