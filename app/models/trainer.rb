@@ -20,4 +20,5 @@ class Trainer < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
+  has_many :sns_credentials
 end
