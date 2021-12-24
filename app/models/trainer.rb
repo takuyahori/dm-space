@@ -2,8 +2,9 @@ class Trainer < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omuniauth_providers: [:facebook, :google_oauth2]
+         :recoverable, :rememberable, :validatable
 
+         
   with_options presence: true do
     validates :nickname
     validates :profile
@@ -19,6 +20,6 @@ class Trainer < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :like_posts, through: :likes, source: :post
-  has_many :sns_credentials
+  has_many :like_posts, through: :likes, source: :posts
+
 end

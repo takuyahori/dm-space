@@ -85,11 +85,9 @@ ActiveRecord::Schema.define(version: 2021_12_23_020301) do
     t.string "provider"
     t.string "uid"
     t.bigint "cliant_id"
-    t.bigint "trainer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cliant_id"], name: "index_sns_credentials_on_cliant_id"
-    t.index ["trainer_id"], name: "index_sns_credentials_on_trainer_id"
   end
 
   create_table "trainers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -114,5 +112,4 @@ ActiveRecord::Schema.define(version: 2021_12_23_020301) do
   add_foreign_key "likes", "trainers"
   add_foreign_key "posts", "cliants"
   add_foreign_key "sns_credentials", "cliants"
-  add_foreign_key "sns_credentials", "trainers"
 end

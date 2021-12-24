@@ -4,7 +4,6 @@ class CreateSnsCredentials < ActiveRecord::Migration[6.0]
       t.string :provider
       t.string :uid
       t.references :cliant, foreign_key: true
-      t.references :trainer, foreign_key: true
       t.timestamps
     end
   end
