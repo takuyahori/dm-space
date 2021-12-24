@@ -66,5 +66,6 @@ gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth', '~>2.0'
+gem 'dotenv-rails'
 
 gem "aws-sdk-s3", require: false
