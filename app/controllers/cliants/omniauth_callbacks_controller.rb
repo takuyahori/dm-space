@@ -1,6 +1,25 @@
 # frozen_string_literal: true
 
 class Cliants::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  def facebook
+    authorization
+  end
+
+  def google_oauth2
+    authorization
+  end
+
+  private
+
+  def authorization
+    @cliant = Cliant.from_omniauth(request.env["omniauth.auth"])
+    if @cliant.persisted?
+      sign_in_and_redirect @cliant, event: :authentication
+    else
+      render template: 'cliants/registrations/new'
+    end
+  end
+  
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
