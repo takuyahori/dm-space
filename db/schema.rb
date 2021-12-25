@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_070925) do
+ActiveRecord::Schema.define(version: 2021_12_23_020301) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -81,6 +81,15 @@ ActiveRecord::Schema.define(version: 2021_11_24_070925) do
     t.index ["cliant_id"], name: "index_posts_on_cliant_id"
   end
 
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "cliant_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cliant_id"], name: "index_sns_credentials_on_cliant_id"
+  end
+
   create_table "trainers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -102,4 +111,5 @@ ActiveRecord::Schema.define(version: 2021_11_24_070925) do
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "trainers"
   add_foreign_key "posts", "cliants"
+  add_foreign_key "sns_credentials", "cliants"
 end

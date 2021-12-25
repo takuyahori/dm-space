@@ -2,7 +2,7 @@ class Cliant < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   with_options presence: true do
     validates :nickname
@@ -22,5 +22,19 @@ class Cliant < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
+  has_many :sns_credentials
+
+  def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
+    cliant = Cliant.where(email: auth.info.email).first_or_initialize(
+      nickname: auth.info.name,
+        email: auth.info.email
+    )
+    if cliant.persisted?
+      sns.cliant = cliant
+      sns.save
+    end
+    cliant
+  end
 
 end

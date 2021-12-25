@@ -101,3 +101,35 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+.fb_btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 60px;
+  background: rgb(11, 94, 202);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 7px 7px #666666;
+  border: 2px solid rgb(11, 94, 202, 0.97);
+  margin: 20px 10px 20px 10px ;
+}
+
+.google_btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 60px;
+  background: rgb(148, 205, 243);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 7px 7px #666666;
+  border: 2px solid rgb(148, 205, 243, 0.97);
+  margin: 20px 10px 30px 10px;
+}
