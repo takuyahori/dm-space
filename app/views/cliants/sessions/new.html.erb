@@ -10,8 +10,8 @@
     <%= flash[:alert] %>
   </div>
   <div class="form-group">
-  <%= link_to 'Facebookdでログイン', cliant_facebook_omniauth_authorize_path, method: :post %>
-  <%= link_to 'Googleでログイン', cliant_google_oauth2_omniauth_authorize_path, method: :post %>
+  <%= link_to 'Facebookdでログイン', cliant_facebook_omniauth_authorize_path, method: :post, class: "fb_btn" %>
+  <%= link_to 'Googleでログイン', cliant_google_oauth2_omniauth_authorize_path, method: :post, class: "google_btn" %>
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
