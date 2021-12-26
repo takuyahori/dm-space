@@ -130,6 +130,6 @@
   line-height: 1em;
   transition: .3s;
   box-shadow: 7px 7px #666666;
-  border: 2px solid rgb(148, 205, 243, 0.97);
+  border: 2px solid rgba(148, 205, 243, 0.97);
   margin: 20px 10px 30px 10px;
 }
