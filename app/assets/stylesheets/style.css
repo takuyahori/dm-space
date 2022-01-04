@@ -35,16 +35,42 @@ ul,li {
   padding: 20px;
   color: rgb(240, 243, 245);
 }
+
+.nav_right {
+  width: 50%;
+}
+
+.nav-lists {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.red {
+  background-color: red;
+}
+
+.show-lists {
+  width: 200px;
+  position: absolute;
+  right: 370px;
+  top: 70px;
+  background-color: #ffffff
+}
+
 .nav_btn {
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #3e4f5a;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #3e4f5a solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+}
+
+.background-red{
+  background-color: #FF6666 ;
+  color: white;
+}
+
+.hidden {
+  display: none;
 }
 
 /* ファーストビュー */

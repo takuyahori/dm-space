@@ -4,9 +4,14 @@
       <h1 class="nav_left"><a>DMspace</a></h1>
       <% if cliant_signed_in? %>
         <div class="nav_right">
-          <%= link_to "cliant_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %>
-          <%= link_to "My Page", "/cliants/#{current_cliant.id}", class: :nav_btn %>
-          <%= link_to "New Post", new_post_path, class: :nav_btn %>
+          <ul class="nav-lists">
+            <li class="background-red" id="lists">リスト</li>
+          </ul>
+          <ul class="show-lists hidden" id="pull-down">
+            <li><%= link_to "cliant_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %></li>
+            <li><%= link_to "My Page", "/cliants/#{current_cliant.id}", class: :nav_btn %></li>
+            <li><%= link_to "New Post", new_post_path, class: :nav_btn %></li>
+          </ul>
         </div>
       <% elsif trainer_signed_in? %>
         <div class="nav_right">
