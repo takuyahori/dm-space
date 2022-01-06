@@ -19,6 +19,7 @@ ul,li {
   background-color: #f7c9e3;
   padding: 20px 0;
   height: 50px;
+  position: relative;
 }
 .header_inner {
   width: 1024px;
@@ -68,6 +69,11 @@ ul,li {
 .background-red{
   background-color: #FF6666 ;
   color: white;
+  font-size: 30px;
+  height: 50px;
+  padding-top: 10px;
+  position: relative;
+  bottom: 15px;
 }
 
 .hidden {

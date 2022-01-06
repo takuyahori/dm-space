@@ -5,7 +5,7 @@
       <% if cliant_signed_in? %>
         <div class="nav_right">
           <ul class="nav-lists">
-            <li class="background-red" id="lists">リスト</li>
+            <li class="background-red" id="lists">Select▼</li>
           </ul>
           <ul class="show-lists hidden" id="pull-down", style="list-style: none;">
             <li><%= link_to "cliant_out", destroy_cliant_session_path, method: :delete, class: :nav_btn %></li>
