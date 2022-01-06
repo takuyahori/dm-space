@@ -57,6 +57,7 @@ ul,li {
   right: 370px;
   top: 70px;
   background-color: #ffffff
+  
 }
 
 .nav_btn {
@@ -71,6 +72,10 @@ ul,li {
 
 .hidden {
   display: none;
+}
+
+ul {
+  list-style: none;
 }
 
 /* ファーストビュー */
