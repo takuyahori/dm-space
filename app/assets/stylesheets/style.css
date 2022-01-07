@@ -53,17 +53,51 @@ ul,li {
 }
 
 .show-lists {
-  width: 200px;
+  height: 230px;
+  width: 180px;
   position: absolute;
   right: 370px;
   top: 70px;
-  background-color: #ffffff
-  
+  background-color: #ffffff;
+  padding: 40px 10px 40px 10px;
+  box-shadow: rgb(170 170 170 / 50%) 0px 2px 5px;
+  z-index: 10;
+}
+
+.show-lists-b {
+  height: 30px;
+  width: 180px;
+  position: absolute;
+  right: 370px;
+  top: 70px;
+  background-color: #ffffff;
+  padding: 40px 10px 40px 10px;
+  box-shadow: rgb(170 170 170 / 50%) 0px 2px 5px;
+  z-index: 10;
+}
+
+.show-lists-c {
+  height: 150px;
+  width: 180px;
+  position: absolute;
+  right: 370px;
+  top: 70px;
+  background-color: #ffffff;
+  padding: 40px 10px 40px 10px;
+  box-shadow: rgb(170 170 170 / 50%) 0px 2px 5px;
+  z-index: 10;
 }
 
 .nav_btn {
+  font-size: 23px;
+  border: 1px bold #070707;
+  color: #070707;
   padding: 15px 35px 15px 15px;
-  border: 1px solid #eee;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  min-width: 50px;
+  border-top: 1px solid rgb(12, 11, 11);
 }
 
 .background-red{
@@ -74,6 +108,7 @@ ul,li {
   padding-top: 10px;
   position: relative;
   bottom: 15px;
+  box-shadow: 7px 7px #666666;
 }
 
 .hidden {
@@ -83,6 +118,7 @@ ul,li {
 ul {
   list-style: none;
 }
+
 
 /* ファーストビュー */
 .first-view {
