@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 require("./slick")
+require("../header")
 
 // import '@fortawesome/fontawesome-free/js/all';
 // Uncomment to copy all static images under ../images to the output folder and reference
